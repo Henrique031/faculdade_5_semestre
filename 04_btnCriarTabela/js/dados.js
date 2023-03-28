@@ -8,25 +8,25 @@ Version: 1.0
 let buttonTable = document.getElementById('table')
 
 
-const createElements = () => {
-    let userName = document.getElementById('name').value
-    let userNumber = document.getElementById('telephone').value
-    let div = document.getElementById('nameList')
+// const createElements = () => {
+//     let userName = document.getElementById('name').value
+//     let userNumber = document.getElementById('telephone').value
+//     let div = document.getElementById('nameList')
 
-    let ulNames = document.createElement('ul')
-    let liNames = document.createElement('li')
+//     let ulNames = document.createElement('ul')
+//     let liNames = document.createElement('li')
 
-    let itemName = document.createTextNode(`Name: ${userName}`)
-    let itemNumber = document.createTextNode(`Number: ${userNumber}`)
+//     let itemName = document.createTextNode(`Name: ${userName}`)
+//     let itemNumber = document.createTextNode(`Number: ${userNumber}`)
 
     
-    //AppendChild - Permite associar um elemento filho ao elemento pai //Append - Acrecentar //Child - Filho
-    div.appendChild(ulNames)
-    ulNames.appendChild(liNames)
-    liNames.appendChild(itemName)
-    liNames.appendChild(itemNumber)
+//     //AppendChild - Permite associar um elemento filho ao elemento pai //Append - Acrecentar //Child - Filho
+//     div.appendChild(ulNames)
+//     ulNames.appendChild(liNames)
+//     liNames.appendChild(itemName)
+//     liNames.appendChild(itemNumber)
 
-}
+// }
 
 const createTable = () => {
     let div = document.getElementById('nameList')
@@ -46,6 +46,28 @@ const createTable = () => {
 
     columnName.appendChild(`${nameTitle}`)
     columnTelephone.appendChild(`${telephoneTitle}`)
+
+}
+
+const createItensTable = () => {
+    
+}
+
+const getInput = () => {
+    let nameIn = document.getElementById('nome').value
+    let telIn = document.getElementById('telefone').value
+
+    if (!isNaN(nameIn)) {
+        return alert('Nome inválido')
+    } else if(isNaN(telIn)){
+        return alert('Telefone Inválido')
+    }
+
+    let txtNome = document.createTextNode(nameIn)
+    let txtTel = document.createTextNode(telIn)
+
+    
+
 
 }
 
