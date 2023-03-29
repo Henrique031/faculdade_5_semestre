@@ -7,6 +7,27 @@
     <title>Formulário</title>
 </head>
 <body>
+    <!-- 
+        <form> - Permite especificar que o conteudo e dentro será elementos de formulário
+            <form name - Define um nome para o elemento
+                method
+                        GET - Envia os dados do formulário para a URL
+                        POST - Envia os dados do formulário para variáveis locais no navegador (melhor opção)
+
+                    action - especifica para qual arquivo ou página os dados serão enviados
+                <input> - permite colocar elementos de entrada de dados
+                <input type="text"
+                            "number"
+                            "email" etc
+                        size - permite ajustar o tamanho da caixa
+                        maxlenght - permite limitar a qtde de caracters
+                        min / max - permite especificar no type = "number" o maximo e o minimo de valores
+
+                        type="submit" - permite criar um botão para resgatar os dados do formulário, via GET ou POST
+                        type="reset" - permite validar a digitação de email
+                        type="radio" - permite colocar elementos de unica escolha, porém para funcionar precisa que todos os elementos do radio, tenham o mesmo nome
+                        type="checkbox" - Permite colocar elementos de multipla escolha
+     -->
     <form name="frmContatos" method="get" action="SuaMae.html">
         <table width="300" height="30" border="1" align="center">
             <tr>
@@ -15,15 +36,61 @@
             <tr>
                 <td>Nome: </td>
                 <td>
-                    <input type="text" name="txtNome" id="" maxlength="50" size="80" placeholder="Nome da lenda: ">
+                    <input 
+                    type="text" 
+                    name="txtNome" 
+                    id="" 
+                    maxlength="50" 
+                    size="80" 
+                    placeholder="Nome da lenda: "
+                    required>
                 </td>
             </tr>
             <tr>
                 <td>Idade: </td>
                 <td>
-                    <input type="number" name="nbrIdade" max="60">
+                    <input type="number" name="nbrIdade" max="60" min="0">
                 </td>
             </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="email" name="txtEmail" id=""></td>
+            </tr>
+            <tr>
+                <td>Sexo: </td>
+                <td>
+                    <input type="radio" name="rdoSexo" value="F"> Feminino
+                    <input type="radio" name="rdoSexo" value="M" checked> Masculino
+                </td>
+            </tr>
+            <tr>
+                <td>Idiomas: </td>
+                <td>
+                    <input type="checkbox" name="chkPT" value="pt-br" checked> Português
+                    <input type="checkbox" name="chkEN" value="en"> Inglês
+                    <input type="checkbox" name="chkES" value="es"> Espanhol
+                </td>
+            </tr>
+            <tr>
+                <td>UF: </td>
+                <td>
+                    <select name="sltEstados">
+                        <option value="SP">SP</option>
+                        <option value="RJ">RJ</option>
+                        <option value="AC">AC</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="btnSalvar" value="Salvar">
+                </td>
+                <td>
+                    <input type="reset" name="btnLimpar" value="Limpar">
+                </td>
+            </tr>
+
+
         </table>
     </form>
 </body>
